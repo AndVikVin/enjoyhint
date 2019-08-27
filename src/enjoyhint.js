@@ -82,7 +82,7 @@ var EnjoyHint = function(configs) {
     $('#enjoyhint_arrpw_line').remove();
     $body.enjoyhint('hide_next');
     $body.enjoyhint('hide_skip');
-  }
+  };
 
   var stepAction = function() {
     if (!(data && data[current_step])) {
