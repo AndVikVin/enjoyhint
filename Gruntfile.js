@@ -4,7 +4,7 @@ module.exports = function(grunt){
         uglify: {
             main: {
                 files: {
-                    '<%= pkg.name %>.min.js': './src/enjoyhint.js'
+                    '<%= pkg.name %>.min.js': './src/<%= pkg.name%>.js'
                 }
             }
         },
