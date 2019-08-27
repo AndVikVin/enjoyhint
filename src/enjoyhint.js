@@ -30,7 +30,7 @@ var EnjoyHint = function(configs) {
   var data = [];
   var current_step = 0;
 
-  const $body = $(body);
+  var $body = $(body);
 
   /********************* PRIVATE METHODS ***************************************/
 
