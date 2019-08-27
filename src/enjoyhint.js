@@ -30,7 +30,7 @@ var EnjoyHint = function(configs) {
   var data = [];
   var current_step = 0;
 
-  $body = $(body);
+  const $body = $(body);
 
   /********************* PRIVATE METHODS ***************************************/
 
@@ -127,11 +127,14 @@ var EnjoyHint = function(configs) {
         that.clear();
       }, 250);
 
-      //$(document.body).scrollTop(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -100});
-      var elemToScroll = document.querySelector(step_data.selector);
-      if (elemToScroll) {
-        let { x, y } = elemToScroll.getClientRects();
-        window.scrollTo(x, y);
+      let isHintInViewport = $(step_data.selector).get(0).getBoundingClientRect();
+      if(isHintInViewport.top < 0 || isHintInViewport.bottom > (window.innerHeight || document.documentElement.clientHeight)){
+          $body.enjoyhint('render_circle', []);
+          $('#enjoyhint_label').remove();
+          $('#enjoyhint_arrpw_line').remove();
+          $body.enjoyhint('hide_next');
+          $body.enjoyhint('hide_skip');
+          $(document.body).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -200});
       }
 
       setTimeout(function() {
