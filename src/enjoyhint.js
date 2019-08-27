@@ -76,6 +76,14 @@ var EnjoyHint = function(configs) {
     $skipBtn.text(BTN_SKIP_TEXT);
   };
 
+  function hideCurrentHint(){
+    $body.enjoyhint('render_circle', []);
+    $('#enjoyhint_label').remove();
+    $('#enjoyhint_arrpw_line').remove();
+    $body.enjoyhint('hide_next');
+    $body.enjoyhint('hide_skip');
+  }
+
   var stepAction = function() {
     if (!(data && data[current_step])) {
       $body.enjoyhint("hide");
@@ -127,13 +135,9 @@ var EnjoyHint = function(configs) {
         that.clear();
       }, 250);
 
-      let isHintInViewport = $(step_data.selector).get(0).getBoundingClientRect();
+      var isHintInViewport = $(step_data.selector).get(0).getBoundingClientRect();
       if(isHintInViewport.top < 0 || isHintInViewport.bottom > (window.innerHeight || document.documentElement.clientHeight)){
-          $body.enjoyhint('render_circle', []);
-          $('#enjoyhint_label').remove();
-          $('#enjoyhint_arrpw_line').remove();
-          $body.enjoyhint('hide_next');
-          $body.enjoyhint('hide_skip');
+          hideCurrentHint();
           $(document.body).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -200});
       }
 
