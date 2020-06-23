@@ -9,7 +9,7 @@ var enjoyhint_script_steps = [
         "next #banner": 'Hello, I\'d like to tell you about EnjoyHint.<br> Click "Next" to proceed.',
     },
     {
-        'next #as' : "For example, let's set <br>For example, let's set <br>For example, let's set <br>"
+        'next #someText' : "For example, let's set <br>For example, let's set <br>For example, let's set <br>"
     },
     {
         "next #buttons": "You can select different blocks. For example, let's select title.<br>" +
@@ -33,13 +33,13 @@ var enjoyhint_script_steps = [
         'next .col-lg-6' : "For example, let's set a handler for a button click event"
     },
     {
-        'next #ewq' : "For example, let's set a handler for a button click event"
+        'next #test1' : "For example, let's set a handler for a button click event"
     },
     {
         'next .btn-group-vertical' : "For example, let's set a handler for a button click event"
     },
     {
-        'next #qwe' : "YouzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzYouzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzYouzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz "
+        'next #longText' : "Long Text Here Long Text Here Long Text Here Long Text Here Long Text Here Long Text Here Long Text Here Long Text Here Long Text Here Long Text Here"
     },
     {
         "next #button6" : "You can highlight blocks by selecting them in a circle. <br>" +
